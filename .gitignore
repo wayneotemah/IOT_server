@@ -7,7 +7,7 @@
 _pycache_
 db.sqlite3
 media
-runtime.txt
+
 
 # Backup files # 
 *.bak 
