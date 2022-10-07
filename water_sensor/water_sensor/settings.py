@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework', 
     'channels',
+    'whitenoise',
     #my apps
     'water_reading'
 ]
