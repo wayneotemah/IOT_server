@@ -3,12 +3,15 @@ attrs==22.1.0
 autobahn==22.7.1
 Automat==20.2.0
 backports.zoneinfo==0.2.1
+boto==2.49.0
 cffi==1.15.1
 channels==3.0.5
 constantly==15.1.0
 cryptography==38.0.1
 daphne==3.0.2
+dj-database-url==1.0.0
 Django==4.0.2
+django-storages==1.13.1
 djangorestframework==3.14.0
 hyperlink==21.0.0
 idna==3.4
