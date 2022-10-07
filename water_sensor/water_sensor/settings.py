@@ -74,7 +74,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'water_sensor.wsgi.application'
-ASGI_APPLICATION = "water_sensor.asgi.application"
+ASGI_APPLICATION = 'water_sensor.asgi.application'
 
 
 # Database
