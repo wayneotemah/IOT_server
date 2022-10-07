@@ -14,7 +14,7 @@ from channels.security.websocket import AllowedHostsOriginValidator
 from channels.routing import ProtocolTypeRouter,URLRouter
 from django.core.asgi import get_asgi_application
 
-import water_reading
+from water_reading.urls import websocket_patterns
 
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'water_sensor.settings')
@@ -27,7 +27,7 @@ application = ProtocolTypeRouter({
     "websocket": AllowedHostsOriginValidator(
         AuthMiddlewareStack(
             URLRouter(
-                water_reading.urls.websocket_patterns
+                websocket_patterns
             )
         )
     ),
