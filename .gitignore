@@ -8,7 +8,9 @@ _pycache_
 db.sqlite3
 media
 bin/
-
+lib64/
+lib/
+share/
 # Backup files # 
 *.bak 
 
