@@ -1,29 +1,29 @@
 from http.client import HTTPResponse
 from django.shortcuts import render
 from django.http import JsonResponse
-from .models import Value
-
+from .models import Soil_mositure
 from rest_framework.decorators import api_view
 from rest_framework import status
 from rest_framework.response import Response
 from .serializer import WaterValueSerializer
+
 # Create your views here.
 @api_view(['GET'])
 def waterReadingList(request):
-    waterValue=Value.objects.all()
+    waterValue=Soil_mositure.objects.all()
     serializer =WaterValueSerializer(waterValue, many=True)
     return Response(serializer.data)
 
 # to get the current water value 
 @api_view(['GET'])
 def waterReadingCurrent(request):
-    waterValue=Value.objects.last()
+    waterValue=Soil_mositure.objects.last()
     serializer =WaterValueSerializer(waterValue, many=False)
     return Response(serializer.data)
 
 @api_view(['POST'])
 def waterReadingCurrent(request):
-    waterValue=Value.objects.last()
+    waterValue=Soil_mositure.objects.last()
     serializer =WaterValueSerializer(waterValue, many=False)
     return Response(serializer.data)
 

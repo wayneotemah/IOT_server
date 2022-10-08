@@ -1,10 +1,10 @@
 from multiprocessing.sharedctypes import Value
 from rest_framework import serializers
-from .models import Value
+from .models import Soil_mositure
 
 class WaterValueSerializer(serializers.ModelSerializer):
     class Meta:
-        model =Value
+        model =Soil_mositure
         fields='__all__'
-        extra_kwargs = {"dateTime": {"read_only": True}}
+        extra_kwargs = {"time": {"read_only": True}}
     

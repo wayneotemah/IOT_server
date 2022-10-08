@@ -1,5 +1,5 @@
 """
-WSGI config for water_sensor project.
+WSGI config for water_sensor2 project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,8 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'water_sensor.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'water_sensor2.settings')
 
-# application = get_wsgi_application()
-import django.core.handlers.wsgi
-application = django.core.handlers.wsgi.WSGIHandler()
+application = get_wsgi_application()
