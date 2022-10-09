@@ -6,7 +6,7 @@ from django.db import models
 class Soil_mositure(models.Model):
 
     mositure = models.FloatField(null=False,blank = False)
-    time = models.TimeField(auto_now=True)
+    time = models.DateTimeField(auto_now=True)
 
     class Meta:
         verbose_name = ("soil mositure")
