@@ -13,5 +13,4 @@ from django.core.wsgi import get_wsgi_application
 from django.conf import settings
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'water_sensor2.settings')
-# os.environ['DJANGO_SETTINGS_MODULE' ]='water_sensor2.settings'
 application = get_wsgi_application()

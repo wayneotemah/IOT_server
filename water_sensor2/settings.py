@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework', 
-    'channels',
+    # 'channels',
     'whitenoise',
     #my apps
     'water_reading'
@@ -74,7 +74,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'water_sensor2.wsgi.application'
-ASGI_APPLICATION = 'water_sensor2.asgi.application'
+# ASGI_APPLICATION = 'water_sensor2.asgi.application'
 
 
 # Database
@@ -136,11 +136,11 @@ db_from_env=dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_env)
 
 
-CHANNEL_LAYERS = {
-    "default": {
-        "BACKEND": "channels.layers.InMemoryChannelLayer"
-    }
-}
+# CHANNEL_LAYERS = {
+#     "default": {
+#         "BACKEND": "channels.layers.InMemoryChannelLayer"
+#     }
+# }
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
