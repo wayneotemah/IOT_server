@@ -27,16 +27,16 @@ def waterReadingCurrent(request):
     serializer =WaterValueSerializer(waterValue, many=False)
     return Response(serializer.data)
 
-@api_view(['POST'])
-def waterReadingUpdate(request):
-    waterValue=request.query_params.get('Value')
-    print(waterValue)
-    if waterValue is not None:
-        context = {
-            'waterlevel':waterValue
-        }
-        serializer =WaterValueSerializer(data = context)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+# @api_view(['POST'])
+# def waterReadingUpdate(request):
+#     waterValue=request.query_params.get('Value')
+#     print(waterValue)
+#     if waterValue is not None:
+#         context = {
+#             'waterlevel':waterValue
+#         }
+#         serializer =WaterValueSerializer(data = context)
+#         if serializer.is_valid():
+#             serializer.save()
+#             return Response(serializer.data, status=status.HTTP_201_CREATED)
+#     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
