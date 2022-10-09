@@ -16,16 +16,20 @@ def waterReadingList(request):
 
 # to get the current water value 
 @api_view(['GET'])
-def waterReadingCurrent(request):
+def waterReadingCurrentGet(request):
     waterValue=Soil_mositure.objects.last()
     serializer =WaterValueSerializer(waterValue, many=False)
     return Response(serializer.data)
 
 @api_view(['POST'])
 def waterReadingCurrent(request):
-    waterValue=Soil_mositure.objects.last()
-    serializer =WaterValueSerializer(waterValue, many=False)
-    return Response(serializer.data)
+    serializer =WaterValueSerializer(data = request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data)
+    else:
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
 
 # @api_view(['POST'])
 # def waterReadingUpdate(request):

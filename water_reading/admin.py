@@ -1,5 +1,5 @@
 from django.contrib import admin
-from models import Soil_mositure
+from .models import Soil_mositure
 # Register your models here.
 
 
