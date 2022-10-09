@@ -13,4 +13,4 @@ class Soil_mositure(models.Model):
         verbose_name_plural = ("soil mositure")
 
     def __str__(self):
-        return self.time
+        return f"{self.time}"
