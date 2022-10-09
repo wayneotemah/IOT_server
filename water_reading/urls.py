@@ -8,6 +8,6 @@ urlpatterns=[
     ]
 
 
-websocket_patterns = [
-    path(r'stream/', consumer.ChatConsumer.as_asgi())
-]
+# websocket_patterns = [
+#     path(r'stream/', consumer.ChatConsumer.as_asgi())
+# ]
