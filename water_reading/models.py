@@ -14,3 +14,14 @@ class Soil_moisture(models.Model):
 
     def __str__(self):
         return f"{self.time}"
+
+
+class WaterPump(models.Model):
+
+    water_now = models.BooleanField(null=False,blank = False)
+
+    class Meta:
+        verbose_name = ("Water")
+
+    def __str__(self):
+        return f"{self.watering}"
